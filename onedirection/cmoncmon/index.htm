@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		var audio_clock;
+		$(track).bind("timeupdate", onAudioUpdate);
+		$(track).bind("play", function(){
+			audio_clock = setInterval(function(){
+				onAudioUpdate();
+			}, 5);
+		});
+		$(track).bind("pause", function(){
+			clearInterval(audio_clock);
+		}); 
+		function onAudioUpdate() {
+			document.getElementById('tracktime').innerHTML = audio_clock.toFixed(1);
+		}
+	</script>
+	<script>
+		var a = 'C\'mon!';
+		var b = 'C\'mon! C\'mon!';
+		var c = 'The';
+		var d = 'The one';
+		var e = 'The one that';
+		var f = 'The one that I';
+		var g = 'The one that I came';
+		var h = 'The one that I came with,';
+		var i = 'She';
+		var j = 'She had';
+		var k = 'She had to';
+		var l = 'She had to go.';
+		var m = 'But';
+		var n = 'But you';
+		var o = 'But you look';
+		var p = 'But you look amazing,';
+		var q = 'Standing';
+		var r = 'Standing alone.';
+		var s = 'So,';
+		var t = 'So, C\'mon';
+		var u = 'So, C\'mon C\'mon';
+		var v = 'Move';
+		var w = 'Move a';
+		var x = 'Move a little';
+		var y = 'Move a little closer';
+		var z = 'Move a little closer now.';
+		setInterval(function() {
+			if (track.currentTime.toFixed(2) == '3.80') {document.getElementById('lyric').textContent = a;};
+			if (track.currentTime.toFixed(2) == '4.10') {document.getElementById('lyric').textContent = b;};
+			if (track.currentTime.toFixed(2) == '11.00') {document.getElementById('lyric').textContent = c;};
+			if (track.currentTime.toFixed(2) == '11.20') {document.getElementById('lyric').textContent = d;};
+			if (track.currentTime.toFixed(2) == '11.45') {document.getElementById('lyric').textContent = e;};
+			if (track.currentTime.toFixed(2) == '11.60') {document.getElementById('lyric').textContent = f;};
+			if (track.currentTime.toFixed(2) == '11.95') {document.getElementById('lyric').textContent = g;};
+			if (track.currentTime.toFixed(2) == '12.40') {document.getElementById('lyric').textContent = h;};
+			if (track.currentTime.toFixed(2) == '14.50') {document.getElementById('lyric').textContent = i;};
+			if (track.currentTime.toFixed(2) == '14.75') {document.getElementById('lyric').textContent = j;};
+			if (track.currentTime.toFixed(2) == '15.00') {document.getElementById('lyric').textContent = k;};
+			if (track.currentTime.toFixed(2) == '15.30') {document.getElementById('lyric').textContent = l;};
+			if (track.currentTime.toFixed(2) == '17.80') {document.getElementById('lyric').textContent = m;};
+			if (track.currentTime.toFixed(2) == '18.00') {document.getElementById('lyric').textContent = n;};
+			if (track.currentTime.toFixed(2) == '18.30') {document.getElementById('lyric').textContent = o;};
+			if (track.currentTime.toFixed(2) == '18.60') {document.getElementById('lyric').textContent = p;};
+			if (track.currentTime.toFixed(2) == '21.20') {document.getElementById('lyric').textContent = q;};
+			if (track.currentTime.toFixed(2) == '21.80') {document.getElementById('lyric').textContent = r;};
+			if (track.currentTime.toFixed(2) == '23.65') {document.getElementById('lyric').textContent = s;};
+			if (track.currentTime.toFixed(2) == '24.05') {document.getElementById('lyric').textContent = t;};
+			if (track.currentTime.toFixed(2) == '24.50') {document.getElementById('lyric').textContent = u;};
+			if (track.currentTime.toFixed(2) == '25.35') {document.getElementById('lyric').textContent = v;};
+			if (track.currentTime.toFixed(2) == '25.70') {document.getElementById('lyric').textContent = w;};
+			if (track.currentTime.toFixed(2) == '25.95') {document.getElementById('lyric').textContent = x;};
+			if (track.currentTime.toFixed(2) == '26.40') {document.getElementById('lyric').textContent = y;};
+			if (track.currentTime.toFixed(2) == '26.70') {document.getElementById('lyric').textContent = z;};
+		},1);
+	</script>
+</head>
+<body>
+	<audio
+		id="track"
+		src="http://www.woo55.pk/adata/5619/04.%20Cmon%20Cmon%20%28www.SongsLover.pk%29.mp3"
+		ontimeupdate="">
+	</audio>
+	<button
+		onclick="document.getElementById('track').play();">
+		Play
+	</button>
+		<button
+		onclick="document.getElementById('track').pause();">
+		Pause
+	</button>
+	<span id="tracktime">
+		<script>setInterval(function(){document.getElementById('tracktime').innerHTML = track.currentTime.toFixed(2) + ' / ' + track.duration.toFixed(2)},5);</script>
+	</span><br><br>
+	<div class="lyrics" id="lyric">
+		One Direction - C'mon C'mon
+	</div>
+</body>
+</html>

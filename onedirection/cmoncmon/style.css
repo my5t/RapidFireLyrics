@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'onedirectionmedium';
+    src: url('onedirection-webfont.eot');
+    src: url('onedirection-webfont.eot?#iefix') format('embedded-opentype'),
+         url('onedirection-webfont.woff') format('woff'),
+         url('onedirection-webfont.ttf') format('truetype'),
+         url('onedirection-webfont.svg#onedirectionmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body,html {
+	height:100%;
+	width:100%;
+	margin:0;
+	font-size: 42px;
+}
+
+.lyrics {
+	font-family:onedirectionmedium;
+	font-size: 42px;
+	text-align: center;
+}
